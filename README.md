@@ -5,7 +5,7 @@ Welcome to the AWS Cloud Resume Challenge!  [The AWS Cloud Resume Challenge](htt
 
 # **Architecture**
 
-![AWS Cloud resume challenge](https://github.com/glenleach/aws-cloud-resume-challenge/assets/128903526/f9f58f64-502f-4ef3-b389-74ebd41fa8a9)
+![AWS Cloud resume challenge](https://github.com/glenleach/aws-cloud-resume-challenge/img/AWS-Cloud-resume-challenge.png)
 
 Challenge Overview
 ------------------
