@@ -21,57 +21,56 @@ Before starting the challenge, ensure that you have the following:
 *   AWS CLI (Command Line Interface): Install the AWS CLI on your local machine to interact with AWS services from the command line.
 *   AWS SAM CLI (Serverless Application Model): Install the AWS SAM CLI to develop, test, and deploy serverless applications locally and on AWS.
 
-Getting Started
----------------
+Getting Started Guide for AWS Cloud Resume Challenge
+----------------------------------------------------
 
-Here's a step-by-step guide to help you get started with the AWS Cloud Resume Challenge:
+In this guide, we will walk you through the process of setting up the challenge using the following tools:
 
-1. Define the project scope: Determine the features you want to include in your resume 
-website. Think about the sections you want to display, such as education, work 
-experience, projects, skills, etc.
+1.  S3 (Simple Storage Service):
 
-2. Design your resume website: Create a basic HTML/CSS template for your resume 
-website. You can use any design framework or start from scratch. Keep it simple and 
-professional.
+    *   Create an S3 bucket to store your static website files. Make sure to enable static website hosting and note down the endpoint URL.
+2.  AWS CloudFront:
 
-3. Choose your AWS services: Decide which AWS services you want to use for hosting, 
-storage, and deployment. The typical services used in the challenge include AWS S3, 
-AWS CloudFormation, AWS Lambda, and Amazon API Gateway. You may also consider 
-using AWS Route 53 for DNS management.
+    *   Create a CloudFront distribution and configure it to use your S3 bucket as the origin. This will provide a global Content Delivery Network (CDN) for your website and improve performance.
+3.  Certificate Manager:
 
-4. Set up AWS CLI: Install the AWS Command Line Interface (CLI) on your local machine if 
-you haven't already. The AWS CLI allows you to interact with AWS services from your command line.
+    *   Obtain an SSL/TLS certificate for your domain using AWS Certificate Manager (ACM). This will enable HTTPS for your website and ensure secure communication.
+4.  AWS Lambda:
 
-5. Create an S3 bucket: Create an S3 bucket to host your resume website files. Use the AWS 
-CLI or AWS Management Console to create the bucket.
+    *   Set up an AWS Lambda function to generate dynamic content for your resume, such as retrieving data from a DynamoDB table. Write the necessary code in the language of your choice, and make sure to test it before proceeding.
+5.  DynamoDB:
 
-6. Upload your website files: Upload your HTML, CSS, and other assets to the S3 bucket. 
-Make sure to set the correct permissions so that the objects are publicly accessible.
+    *   Create a DynamoDB table to store your resume data. Define the necessary attributes for your resume, such as name, experience, skills, etc. Populate the table with sample data to start with.
+6.  GitHub Actions:
 
-7. Configure static website hosting: Enable static website hosting on your S3 bucket. This 
-allows AWS to serve your website directly from the bucket.
+    *   Set up a GitHub repository to host your code. Create a workflow using GitHub Actions to automatically deploy your application whenever you push changes to the repository. Include the necessary steps to build and deploy your code to AWS.
+7.  Terraform:
 
-8. Test your website: Access the website using the S3 bucket's endpoint URL. Verify that 
-your website is functioning as expected.
+    *   Use Terraform to define your infrastructure as code. Create a Terraform configuration file that includes the necessary resources, such as S3 bucket, CloudFront distribution, Lambda function, DynamoDB table, etc. Use Terraform commands to deploy your infrastructure to AWS.
 
-9. Create a CloudFormation template: Create an AWS CloudFormation template to define 
-the infrastructure resources required for your website. This includes Lambda functions, 
-API Gateway, and any other necessary resources.
+Once you have set up the above tools, follow these steps to complete the AWS Cloud Resume Challenge:
 
-10. Deploy the CloudFormation stack: Use the AWS CLI or AWS Management Console to 
-deploy the CloudFormation stack based on your template. This will create the 
-infrastructure resources required for your website.
+1.  Build your static website:
 
-11. Test your deployed website: Access the website using the CloudFormation-created API 
-Gateway endpoint URL. Verify that everything is working correctly.
+    *   Create a basic HTML/CSS resume template or use an existing one.
+    *   Customize the template with your resume information and design.
+    *   Upload the static files to your S3 bucket.
+2.  Implement dynamic content:
 
-12. Custom domain (optional): If you want to use a custom domain for your resume website, 
-you can set it up using AWS Route 53 or another domain registrar. Configure DNS 
-settings to point your domain to the CloudFormation-created API Gateway endpoint.
+    *   Modify your HTML/CSS files to incorporate dynamic content.
+    *   Use JavaScript or any other preferred language to make API calls to your Lambda function and retrieve data from DynamoDB.
+    *   Update your Lambda function code to return the requested resume data.
+3.  Test your application:
 
-13. Continuously improve and update: Once your website is up and running, you can 
-continue to improve it by adding more features, refining the design, or integrating 
-additional AWS services.
+    *   Access your website through the CloudFront endpoint URL and ensure that both static and dynamic content is displayed correctly.
+    *   Verify that the data is retrieved from DynamoDB and displayed on your website.
+4.  Continuously deploy changes:
+
+    *   Make updates to your code or resume data in the GitHub repository.
+    *   Commit and push the changes to trigger the GitHub Actions workflow.
+    *   Verify that the changes are automatically deployed to AWS and reflect on your website.
+
+By following this guide, you will have a fully functional AWS Cloud Resume Challenge solution using S3, AWS CloudFront, Certificate Manager, AWS Lambda, DynamoDB, GitHub Actions, and Terraform.
 
 
 
