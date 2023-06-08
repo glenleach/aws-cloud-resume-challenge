@@ -1,7 +1,7 @@
 AWS Cloud Resume Challenge
 ==========================
 
-Welcome to the AWS Cloud Resume Challenge!  [The AWS Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/)is designed to help you showcase your skills in building and deploying a web application using various AWS services. By completing this challenge, you'll not only demonstrate your technical abilities but also create a personal resume website hosted on AWS.
+Welcome to the AWS Cloud Resume Challenge!  [The AWS Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/) is designed to help you showcase your skills in building and deploying a web application using various AWS services. By completing this challenge, you'll not only demonstrate your technical abilities but also create a personal resume website hosted on AWS.
 
 # **Architecture**
 
