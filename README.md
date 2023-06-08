@@ -10,7 +10,7 @@ Welcome to the AWS Cloud Resume Challenge! This challenge is designed to help yo
 Challenge Overview
 ------------------
 
-The challenge involves building a web application that consists of a static website and a serverless backend using AWS services such as Amazon S3, Amazon API Gateway, AWS Lambda, and Amazon DynamoDB. The website should display your resume information, and the backend should handle form submissions from the website.
+The challenge involves building a web application that consists of a static website and a serverless backend using AWS services such as Amazon S3, AWS Lambda, and Amazon DynamoDB. The website should display your resume information, and the backend should handle form submissions from the website.
 
 Prerequisites
 -------------
@@ -24,34 +24,76 @@ Before starting the challenge, ensure that you have the following:
 Getting Started
 ---------------
 
-To begin the challenge, follow these steps:
+Here's a step-by-step guide to help you get started with the AWS Cloud Resume Challenge:
 
-1.  Fork the AWS Cloud Resume Challenge repository: Start by forking the official [AWS Cloud Resume Challenge repository](https://github.com/glenleach/aws-cloud-resume-challenge) on GitHub. This repository contains a sample project structure and code to help you get started.
+1. Define the project scope: Determine the features you want to include in your resume 
+website. Think about the sections you want to display, such as education, work 
+experience, projects, skills, etc.
+
+2. Design your resume website: Create a basic HTML/CSS template for your resume 
+website. You can use any design framework or start from scratch. Keep it simple and 
+professional.
+
+3. Choose your AWS services: Decide which AWS services you want to use for hosting, 
+storage, and deployment. The typical services used in the challenge include AWS S3, 
+AWS CloudFormation, AWS Lambda, and Amazon API Gateway. You may also consider 
+using AWS Route 53 for DNS management.
+
+4. Set up AWS CLI: Install the AWS Command Line Interface (CLI) on your local machine if 
+you haven't already. The AWS CLI allows you to interact with AWS services from your command line.
+
+5. Create an S3 bucket: Create an S3 bucket to host your resume website files. Use the AWS 
+CLI or AWS Management Console to create the bucket.
+
+6. Upload your website files: Upload your HTML, CSS, and other assets to the S3 bucket. 
+Make sure to set the correct permissions so that the objects are publicly accessible.
+
+7. Configure static website hosting: Enable static website hosting on your S3 bucket. This 
+allows AWS to serve your website directly from the bucket.
+
+8. Test your website: Access the website using the S3 bucket's endpoint URL. Verify that 
+your website is functioning as expected.
+
+9. Create a CloudFormation template: Create an AWS CloudFormation template to define 
+the infrastructure resources required for your website. This includes Lambda functions, 
+API Gateway, and any other necessary resources.
+
+10. Deploy the CloudFormation stack: Use the AWS CLI or AWS Management Console to 
+deploy the CloudFormation stack based on your template. This will create the 
+infrastructure resources required for your website.
+
+11. Test your deployed website: Access the website using the CloudFormation-created API 
+Gateway endpoint URL. Verify that everything is working correctly.
+
+12. Custom domain (optional): If you want to use a custom domain for your resume website, 
+you can set it up using AWS Route 53 or another domain registrar. Configure DNS 
+settings to point your domain to the CloudFormation-created API Gateway endpoint.
+
+13. Continuously improve and update: Once your website is up and running, you can 
+continue to improve it by adding more features, refining the design, or integrating 
+additional AWS services.
+
+
+
+
+
+
     
-2.  Set up the project locally: Clone the forked repository to your local machine and navigate to the project directory. Review the project structure and sample code provided. The `template.yaml` file defines the AWS resources required for the backend, and the `index.html` file contains the initial HTML structure for the resume website.
-    
-3.  Customize the resume website: Open the `index.html` file in a text editor and modify it to reflect your own resume information. Update the HTML, CSS, and JavaScript code as needed to create your personal resume website.
-    
-4.  Develop the serverless backend: Update the code in the `app.py` file to handle form submissions from the website. This code will be executed by AWS Lambda functions triggered by Amazon API Gateway.
-    
-5.  Deploy the application: Use the AWS SAM CLI to package and deploy your application to AWS. This will create the necessary AWS resources, including S3 buckets, Lambda functions, API Gateway endpoints, and DynamoDB tables.
-    
-6.  Test the application: Once the application is deployed, test it by visiting the website and submitting the form. Verify that the form data is stored correctly in DynamoDB.
-    
-7.  Optional: Enhance the application: If you want to go the extra mile, you can add additional features or improve the user experience of your application. Some ideas include adding authentication, integrating with other AWS services, or optimizing the website for performance.
-    
-8.  Cleanup: When you're finished with the challenge, clean up the AWS resources to avoid incurring any additional costs.
+Regenerate response
     
 
 Resources
 ---------
 
-*   [AWS Cloud Resume Challenge Repository](https://github.com/aws-samples/aws-cloud-resume-challenge): The official repository containing the challenge instructions, sample code, and project structure.
+
 *   [AWS Documentation](https://aws.amazon.com/documentation/): The official AWS documentation provides detailed information about the various AWS services you'll be using in the challenge.
 *   [AWS CLI Documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/index.html): The documentation for the AWS CLI guides you on how to interact with AWS services from the command line.
 *   [AWS SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html): The AWS SAM CLI documentation explains how to develop, test, and deploy serverless applications using the Serverless Application Model.
 
 Conclusion
 ----------
-
-The AWS Cloud Resume Challenge is an excellent opportunity to demonstrate your AWS skills while creating a personal resume website. By completing this challenge, you'll gain hands-on experience with various AWS services and showcase your abilities to potential employers or clients. Good luck, and happy building!
+Remember to refer to the official AWS documentation for detailed information on each
+service and how to use them. The AWS Cloud Resume Challenge is a great opportunity to
+learn and showcase your skills with AWS services. By completing this challenge, 
+you'll gain hands-on experience with various AWS services and showcase your abilities to potential employers or clients. 
+Good luck, and happy building!
