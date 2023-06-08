@@ -1,7 +1,3 @@
-> create a readme.md file for aws cloud resume challenge
-
-2 / 2
-
 AWS Cloud Resume Challenge
 ==========================
 
@@ -26,7 +22,7 @@ Getting Started
 
 To begin the challenge, follow these steps:
 
-1.  Fork the AWS Cloud Resume Challenge repository: Start by forking the official [AWS Cloud Resume Challenge repository](https://github.com/aws-samples/aws-cloud-resume-challenge) on GitHub. This repository contains a sample project structure and code to help you get started.
+1.  Fork the AWS Cloud Resume Challenge repository: Start by forking the official [AWS Cloud Resume Challenge repository](https://github.com/glenleach/aws-cloud-resume-challenge) on GitHub. This repository contains a sample project structure and code to help you get started.
     
 2.  Set up the project locally: Clone the forked repository to your local machine and navigate to the project directory. Review the project structure and sample code provided. The `template.yaml` file defines the AWS resources required for the backend, and the `index.html` file contains the initial HTML structure for the resume website.
     
@@ -55,8 +51,3 @@ Conclusion
 ----------
 
 The AWS Cloud Resume Challenge is an excellent opportunity to demonstrate your AWS skills while creating a personal resume website. By completing this challenge, you'll gain hands-on experience with various AWS services and showcase your abilities to potential employers or clients. Good luck, and happy building!
-
-License
--------
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
