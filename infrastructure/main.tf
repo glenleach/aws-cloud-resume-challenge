@@ -51,7 +51,7 @@ resource "aws_iam_policy" "iam_policy_for_resume_project" {
             "dynamodb:UpdateItem",
             "dynamodb:GetItem"
           ],
-          "Resource" : "arn:aws:dynamodb:*:*:table/resume-challenge"
+          "Resource" : "arn:aws:dynamodb:*:*:table/cloud-resume"
         },
       ]
     })
@@ -71,7 +71,7 @@ data "archive_file" "zip_the_python_code" {
 
 resource "aws_lambda_function_url" "url1" {
   function_name      = aws_lambda_function.myfunc.function_name
-  authorization_type = "NONE"
+  authorization_type = "NONE" #we need to setup cors and restrict public access
 
   cors {
     allow_credentials = true
