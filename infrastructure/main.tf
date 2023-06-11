@@ -71,11 +71,11 @@ data "archive_file" "zip_the_python_code" {
 
 resource "aws_lambda_function_url" "url1" {
   function_name      = aws_lambda_function.myfunc.function_name
-  authorization_type = "NONE" #we need to setup cors and restrict public access
+  authorization_type = "NONE" 
 
   cors {
     allow_credentials = true
-    allow_origins     = ["*"]
+    allow_origins     = ["https://www.glenleach.net", "https://resume.glenleasch.net"]
     allow_methods     = ["*"]
     allow_headers     = ["date", "keep-alive"]
     expose_headers    = ["keep-alive", "date"]
