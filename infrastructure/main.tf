@@ -48,6 +48,9 @@ resource "aws_iam_policy" "iam_policy_for_resume_project" {
         {
           "Effect" : "Allow",
           "Action" : [
+            "dynamodb:Scan",
+            "dynamodb:GetRecords",
+            "dynamodb:Query",
             "dynamodb:UpdateItem",
             "dynamodb:GetItem",
             "dynamodb:PutItem"
@@ -76,7 +79,7 @@ resource "aws_lambda_function_url" "url1" {
 
   cors {
     allow_credentials = true
-    allow_origins     = ["https://www.glenleach.net", "https://resume.glenleach.net"]
+    allow_origins     = ["*"]
     allow_methods     = ["*"]
     allow_headers     = ["date", "keep-alive"]
     expose_headers    = ["keep-alive", "date"]
