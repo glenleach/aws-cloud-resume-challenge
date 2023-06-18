@@ -6,6 +6,9 @@ resource "aws_lambda_function" "myfunc" {
   handler          = "func.lambda_handler"
   runtime          = "python3.8"
   depends_on       = [aws_iam_role_policy_attachment.attach_iam_policy_to_iam_role]
+
+
+
 }
 
 resource "aws_iam_role" "iam_for_lambda" {
@@ -77,7 +80,7 @@ resource "aws_lambda_function_url" "url1" {
 
   cors {
     allow_credentials = true
-    allow_origins     = ["https://www.glenleach.net", "https://www.resume.glenleach.net"]
+    allow_origins     = ["https://www.glenleach.net", "https://resume.glenleach.net"]
     allow_methods     = ["*"]
     allow_headers     = ["date", "keep-alive"]
     expose_headers    = ["keep-alive", "date"]
