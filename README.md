@@ -78,7 +78,7 @@ By following this guide, you will have a fully functional AWS Cloud Resume Chall
 
 
     
-Regenerate response
+
     
 
 Resources
